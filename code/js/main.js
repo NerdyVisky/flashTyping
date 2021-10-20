@@ -5,10 +5,13 @@ const timeLeft = document.querySelector("#timeLeft");
 const resultBox = document.querySelector(".result-box");
 const wpm = document.querySelector('#wpm');
 const categoryDisplay = document.querySelector('#category');
+const newHighScore = document.querySelector('#new-high-score');
+const newHighScoreDisplay = document.querySelector('#score');
 let category;
 let isFirstInput = true;
 let wordCount = 0;
 
+newHighScoreDisplay.innerText = localStorage.getItem('high-score');
 async function fetchQuote() {
   return fetch(RANDOM_WORDS_URL)
     .then((res) => res.json())
@@ -79,6 +82,11 @@ function startTimer() {
         }
         wpm.innerText = wordCount;
         categoryDisplay.innerText = category;
+        if(wordCount > localStorage.getItem("high-score") || localStorage.getItem("high-score") == null){
+            newHighScore.style.display = "block";
+            newHighScoreDisplay.innerText = wordCount;
+            localStorage.setItem("high-score", wordCount);
+        }
         resultBox.style.display = "block";
         wordCount = 0;
     }
