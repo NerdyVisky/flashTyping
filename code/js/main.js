@@ -2,7 +2,12 @@ const RANDOM_WORDS_URL = "http://api.quotable.io/random";
 const quoteDisplay = document.querySelector("#display");
 const quoteInputBox = document.querySelector(".input-box");
 const timeLeft = document.querySelector("#timeLeft");
+const resultBox = document.querySelector(".result-box");
+const wpm = document.querySelector('#wpm');
+const categoryDisplay = document.querySelector('#category');
+let category;
 let isFirstInput = true;
+let wordCount = 0;
 
 async function fetchQuote() {
   return fetch(RANDOM_WORDS_URL)
@@ -49,6 +54,7 @@ quoteInputBox.addEventListener("input", () => {
     }
   });
   if (isAllCorrect) {
+    wordCount += quoteInputBox.value.split(" ").length;
     renderQuoteToDisplay();
     quoteInputBox.value = "";
   }
@@ -56,13 +62,25 @@ quoteInputBox.addEventListener("input", () => {
 
 function startTimer() {
   let timePassed = 1;
-  setInterval(() => {
+  let timer = setInterval(() => {
     timeLeft.innerText = 60 - timePassed;
     timePassed++;
-    if(timePassed == 10){
-        clearInterval();
-        alert("time over");
-        location.reload();
+    if(timePassed == 61){
+        clearInterval(timer);
+        wordCount += quoteInputBox.value.split(" ").length;
+        if(wordCount>0 && wordCount<=30){
+            category = "Below Average";
+        }else if(wordCount > 30 && wordCount<=45){
+            category = "Average";
+        }else if(wordCount > 45 && wordCount <=75){
+            category = "Fluent"
+        }else if(wordCount > 75){
+            category = "Professional"
+        }
+        wpm.innerText = wordCount;
+        categoryDisplay.innerText = category;
+        resultBox.style.display = "block";
+        wordCount = 0;
     }
   }, 1000);
   

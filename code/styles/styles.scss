@@ -15,6 +15,40 @@ body {
   flex-direction: column;
   font-family: var(--primary-font);
 }
+.green{
+  color: forestgreen;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+.result-box{
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 25px;
+  transform: translate(-50%, -50%);
+  padding: 3rem 5rem;
+  background-color: white;
+
+  text-align: center;
+  &>*{
+    margin: 15px 0px;
+  }
+  .replay-box{
+    text-align: center;
+    margin-top:30px;
+    a{
+      text-decoration: none;
+      color: var(--primary-background);
+      h3{
+        border-radius: 20px;
+        padding: 10px 15px;
+      background-color: var(--primary-accent);
+      display: inline;
+      }
+    }
+  }
+}
 
 header {
   width: 100%;
@@ -81,6 +115,7 @@ section {
       }
       .failure{
         color: rgb(216, 2, 2);
+        text-decoration: underline;
       }
     }
     .input-box {
