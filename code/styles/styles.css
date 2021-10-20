@@ -97,7 +97,7 @@ section .wrapper {
   padding: 20px 30px;
   margin-top: 5vh;
   margin-left: 3vw;
-  height: 67vh;
+  height: 68vh;
   width: 65vw;
   background: var(--primary-accent);
   border-radius: 20px;
@@ -106,13 +106,21 @@ section .wrapper {
 section .wrapper .display-box {
   height: 40%;
   font-size: 1.5rem;
-  color: black;
+  color: rgba(0, 0, 0, 0.35);
   margin-left: 12px;
   line-height: 1.6;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+}
+
+section .wrapper .display-box .success {
+  color: black;
+}
+
+section .wrapper .display-box .failure {
+  color: #d80202;
 }
 
 section .wrapper .input-box {

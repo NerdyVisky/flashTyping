@@ -18,7 +18,6 @@ body {
 
 header {
   width: 100%;
-  //   background: orange;
   margin-top: 5vh;
   display: flex;
   align-items: center;
@@ -66,18 +65,23 @@ section {
     padding: 20px 30px;
     margin-top: 5vh;
     margin-left: 3vw;
-    height: 67vh;
+    height: 68vh;
     width: 65vw;
-    // border: 2px solid yellow;
     background: var(--primary-accent);
     border-radius: 20px;
     .display-box {
       height: 40%;
       font-size: 1.5rem;
-      color: black;
+      color: rgba(0, 0, 0, 0.35);
       margin-left: 12px;
       line-height: 1.6;
       user-select: none;
+      .success{
+        color: black;
+      }
+      .failure{
+        color: rgb(216, 2, 2);
+      }
     }
     .input-box {
       height: 60%;
