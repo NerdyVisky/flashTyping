@@ -1,0 +1,229 @@
+:root {
+  --primary-font: "Consolas", monospace;
+  --primary-background: #033f5c;
+  --primary-accent: #ffb703;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: var(--primary-background);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: var(--primary-font);
+}
+
+header {
+  width: 100%;
+  margin-top: 5vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header .title-box {
+  background-color: var(--primary-accent);
+  color: var(--primary-background);
+  padding: 20px;
+  font-size: 1.1rem;
+  border-radius: 0px 100px 100px 0px;
+  text-align: left;
+  width: 45%;
+}
+
+header .design-line {
+  height: 5px;
+  width: 35%;
+  background-color: var(--primary-accent);
+}
+
+header .replay-box {
+  width: 20%;
+  background-color: var(--primary-accent);
+  padding: 25px;
+  font-size: 1.2rem;
+  border-radius: 100px 0px 0px 100px;
+  text-align: left;
+}
+
+header .replay-box a {
+  text-decoration: none;
+  color: var(--primary-accent);
+}
+
+header .replay-box h3 {
+  display: inline;
+  background-color: var(--primary-background);
+  padding: 10px 15px;
+  border-radius: 50px;
+}
+
+section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 20px 30px;
+  margin-top: 5vh;
+  margin-left: 3vw;
+  height: 67vh;
+  width: 65vw;
+  background: var(--primary-accent);
+  border-radius: 20px;
+}
+
+section .wrapper .display-box {
+  height: 40%;
+  font-size: 1.5rem;
+  color: black;
+  margin-left: 12px;
+  line-height: 1.6;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+section .wrapper .input-box {
+  height: 60%;
+  background: transparent;
+  outline: none;
+  border-radius: 15px;
+  padding: 10px;
+  font-size: 1.5rem;
+  border: 1px solid #919191;
+  resize: none;
+  line-height: 1.6;
+}
+
+section .wrapper .input-box:focus {
+  border: 3px solid var(--primary-background);
+}
+
+section aside {
+  margin-top: 3vh;
+  margin-left: 3vw;
+  width: 25vw;
+  height: 55vh;
+}
+
+section aside > * {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  height: 50%;
+  color: var(--primary-background);
+  padding: 10px;
+  border-radius: 15px;
+  background: var(--primary-accent);
+  margin: 15px 0px;
+}
+
+section aside .timer-box h3 {
+  font-size: 2.5rem;
+}
+
+section aside .timer-box h3 span {
+  position: absolute;
+  font-size: 1.1rem;
+}
+
+section aside .timer-box .timer {
+  font-size: 3.5rem;
+  border: 3px solid var(--primary-background);
+  color: var(--primary-background);
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+section aside .highscore-box h3 {
+  font-size: 2.5rem;
+}
+
+section aside .highscore-box .highscore {
+  border: 3px solid var(--primary-background);
+  color: var(--primary-background);
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+section aside .highscore-box .highscore span {
+  font-size: 3.5rem;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 3vh;
+  position: relative;
+  width: 100%;
+}
+
+footer .design-line {
+  height: 5px;
+  width: 100%;
+  background-color: var(--primary-accent);
+}
+
+footer .footer-box {
+  position: absolute;
+  right: 0vw;
+  padding: 10px 25px;
+  top: -40px;
+  border-radius: 50px;
+  margin-right: 2vw;
+  width: 25%;
+  background: var(--primary-accent);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+footer .footer-box img {
+  height: 50px;
+}
+/*# sourceMappingURL=styles.css.map */
